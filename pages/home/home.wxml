@@ -8,7 +8,7 @@
   
   <!-- 植物装饰图（大视觉占主体） -->
   <view class="plant-visual">
-    <image class="plant-img" src="/static/images/monstera.png" mode="aspectFit"></image>
+    <image class="plant-img" src="/images/monstera.png" mode="aspectFit"></image>
   </view>
 
   <!-- Logo + Slogan 居中 -->
