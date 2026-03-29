@@ -1,0 +1,210 @@
+/**
+ * AI 对话页 UI Demo - 深墨绿 AI Native 风格
+ */
+
+/* 容器 */
+.chat-container {
+  min-height: 100vh;
+  background: #0D1F12;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 导航栏 */
+.chat-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40rpx 40rpx 20rpx;
+  border-bottom: 1rpx solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-nav-title {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.nav-action-btn {
+  font-size: 28rpx;
+  color: #A8C5B0;
+  padding: 10rpx 20rpx;
+}
+
+/* 消息列表 */
+.message-list {
+  flex: 1;
+  padding: 30rpx 40rpx;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 30rpx;
+  display: flex;
+}
+
+/* AI 消息 */
+.message.ai {
+  justify-content: flex-start;
+}
+
+.message.ai .message-bubble {
+  background: rgba(76, 175, 80, 0.15);
+  border: 1rpx solid rgba(76, 175, 80, 0.3);
+  border-radius: 24rpx 24rpx 24rpx 4rpx;
+}
+
+/* 用户消息 */
+.message.user {
+  justify-content: flex-end;
+}
+
+.message.user .message-bubble {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1rpx solid rgba(255, 255, 255, 0.15);
+  border-radius: 24rpx 24rpx 4rpx 24rpx;
+}
+
+/* 消息气泡 */
+.message-bubble {
+  max-width: 70%;
+  padding: 24rpx 32rpx;
+}
+
+.message-text {
+  font-size: 30rpx;
+  color: #FFFFFF;
+  line-height: 1.6;
+}
+
+/* 确认卡片 */
+.confirm-card {
+  background: rgba(76, 175, 80, 0.1);
+  border: 2rpx solid rgba(76, 175, 80, 0.3);
+  border-radius: 24rpx;
+  padding: 32rpx;
+  margin: 20rpx 0;
+}
+
+.confirm-card-title {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 24rpx;
+}
+
+.confirm-card-field {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid rgba(255, 255, 255, 0.1);
+}
+
+.field-label {
+  font-size: 28rpx;
+  color: #A8C5B0;
+}
+
+.field-value {
+  font-size: 28rpx;
+  color: #FFFFFF;
+}
+
+.confirm-card-actions {
+  display: flex;
+  gap: 24rpx;
+  margin-top: 32rpx;
+}
+
+.btn-primary {
+  flex: 1;
+  height: 90rpx;
+  background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+  border-radius: 45rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.btn-secondary {
+  flex: 1;
+  height: 90rpx;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1rpx solid rgba(255, 255, 255, 0.2);
+  border-radius: 45rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  color: #A8C5B0;
+}
+
+/* 输入区域 */
+.input-area {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 30rpx 40rpx;
+  background: rgba(0, 0, 0, 0.3);
+  gap: 20rpx;
+}
+
+.input-btn {
+  width: 80rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44rpx;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.input-box {
+  flex: 1;
+  height: 80rpx;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1rpx solid rgba(255, 255, 255, 0.15);
+  border-radius: 40rpx;
+  padding: 0 32rpx;
+  font-size: 30rpx;
+  color: #FFFFFF;
+}
+
+.send-btn {
+  width: 140rpx;
+  height: 80rpx;
+  background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+  border-radius: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+/* 打字动画 */
+.typing-indicator {
+  display: flex;
+  gap: 8rpx;
+  padding: 16rpx 0;
+}
+
+.typing-dot {
+  width: 12rpx;
+  height: 12rpx;
+  background: #4CAF50;
+  border-radius: 50%;
+  animation: typing-bounce 1.4s ease-in-out infinite;
+}
+
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing-bounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-10rpx); }
+}
