@@ -9,6 +9,10 @@ Page({
     console.log('首页加载')
   },
 
+  onImageError(e) {
+    console.log('图片加载失败', e)
+  },
+
   takePhoto() {
     wx.showToast({ title: '拍照识别', icon: 'none' })
   },

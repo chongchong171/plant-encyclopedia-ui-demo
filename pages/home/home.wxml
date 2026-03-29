@@ -11,7 +11,13 @@
 
   <!-- 大植物视觉区 -->
   <view class="hero-visual">
-    <image class="plant-image" src="/images/monstera.png" mode="aspectFit"></image>
+    <image 
+      class="plant-image" 
+      src="/images/monstera.png" 
+      mode="aspectFit"
+      lazy-load="true"
+      binderror="onImageError"
+    ></image>
   </view>
 
   <!-- 主操作按钮 -->
