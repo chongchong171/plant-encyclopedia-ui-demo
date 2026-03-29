@@ -1,0 +1,87 @@
+<!-- 花草百科全书 - 主功能页 -->
+<!-- 参考：淡白背景 + 深白模块区分 -->
+<!-- 特色：图文清晰、逻辑分明、功能入口简洁 -->
+
+<view class="container">
+  <!-- 淡白背景 -->
+  <view class="bg-white"></view>
+
+  <!-- 顶部品牌区 -->
+  <view class="header">
+    <text class="header-title">花草百科全书</text>
+    <text class="header-subtitle">你的植物管家</text>
+  </view>
+
+  <!-- 核心功能：拍照识别（大卡片） -->
+  <view class="main-card" bindtap="takePhoto">
+    <view class="card-icon-wrap">
+      <text class="card-icon">📷</text>
+    </view>
+    <view class="card-content">
+      <text class="card-title">拍照识别</text>
+      <text class="card-desc">拍一拍，认识你的植物</text>
+    </view>
+    <text class="card-arrow">›</text>
+  </view>
+
+  <!-- 功能模块区（深白模块区分） -->
+  <view class="func-section">
+    <view class="section-title">快捷功能</view>
+    
+    <!-- 功能列表 -->
+    <view class="func-list">
+      <view class="func-card" bindtap="chooseFromAlbum">
+        <text class="func-icon">🖼️</text>
+        <text class="func-name">相册上传</text>
+      </view>
+      
+      <view class="func-card" bindtap="goToMyPlants">
+        <text class="func-icon">🌱</text>
+        <text class="func-name">我的花园</text>
+        <text class="func-badge" wx:if="{{todayWaterCount > 0}}">{{todayWaterCount}}待浇水</text>
+      </view>
+      
+      <view class="func-card" bindtap="goToSearch">
+        <text class="func-icon">🔍</text>
+        <text class="func-name">搜索植物</text>
+      </view>
+      
+      <view class="func-card" bindtap="goToHistory">
+        <text class="func-icon">📋</text>
+        <text class="func-name">识别历史</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 今日待浇水提醒（深白模块） -->
+  <view class="reminder-section" wx:if="{{todayWaterPlants.length > 0}}">
+    <view class="reminder-card" bindtap="goToMyPlants">
+      <text class="reminder-icon">💧</text>
+      <view class="reminder-content">
+        <text class="reminder-title">今天需要浇水</text>
+        <text class="reminder-plants">{{todayWaterPlantsStr}}</text>
+      </view>
+      <text class="reminder-action">去浇水 ›</text>
+    </view>
+  </view>
+
+  <!-- 底部导航（极简） -->
+  <view class="bottom-nav">
+    <view class="nav-item active">
+      <text class="nav-icon">🏠</text>
+      <text class="nav-text">首页</text>
+    </view>
+    <view class="nav-item" bindtap="goToMyPlants">
+      <text class="nav-icon">🌱</text>
+      <text class="nav-text">花园</text>
+    </view>
+    <view class="nav-item" bindtap="goToChat">
+      <text class="nav-icon">💬</text>
+      <text class="nav-text">AI助手</text>
+    </view>
+    <view class="nav-item" bindtap="goToProfile">
+      <text class="nav-icon">👤</text>
+      <text class="nav-text">我的</text>
+    </view>
+  </view>
+</view>

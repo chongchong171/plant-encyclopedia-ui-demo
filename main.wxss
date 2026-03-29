@@ -1,0 +1,199 @@
+/* 花草百科全书 - 主功能页样式 */
+/* 参考：淡白背景 + 深白模块区分 */
+/* 配色：白 #ffffff，深白 #f5f5f5，墨绿 #1a3a2f */
+
+/* ========== 容器 ========== */
+.container {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 0 0 120rpx 0;
+  position: relative;
+}
+
+/* ========== 顶部品牌区 ========== */
+.header {
+  padding: 40rpx 40rpx 30rpx;
+  background: #ffffff;
+}
+
+.header-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #1a3a2f;
+}
+
+.header-subtitle {
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 6rpx;
+}
+
+/* ========== 核心功能大卡片 ========== */
+.main-card {
+  display: flex;
+  align-items: center;
+  background: #f5f5f5;  /* 深白模块 */
+  margin: 20rpx 40rpx;
+  padding: 30rpx;
+  border-radius: 20rpx;
+}
+
+.card-icon-wrap {
+  width: 80rpx;
+  height: 80rpx;
+  background: #27ae60;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24rpx;
+}
+
+.card-icon {
+  font-size: 40rpx;
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.card-desc {
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 6rpx;
+}
+
+.card-arrow {
+  font-size: 36rpx;
+  color: #999;
+}
+
+/* ========== 功能模块区 ========== */
+.func-section {
+  margin: 30rpx 40rpx;
+}
+
+.section-title {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 16rpx;
+}
+
+.func-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16rpx;
+}
+
+.func-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;  /* 深白模块 */
+  padding: 24rpx;
+  border-radius: 16rpx;
+  position: relative;
+}
+
+.func-icon {
+  font-size: 40rpx;
+  margin-bottom: 8rpx;
+}
+
+.func-name {
+  font-size: 26rpx;
+  color: #1a1a1a;
+}
+
+.func-badge {
+  position: absolute;
+  top: 12rpx;
+  right: 12rpx;
+  background: #f44336;
+  color: #fff;
+  font-size: 20rpx;
+  padding: 4rpx 10rpx;
+  border-radius: 16rpx;
+}
+
+/* ========== 今日提醒 ========== */
+.reminder-section {
+  margin: 20rpx 40rpx;
+}
+
+.reminder-card {
+  display: flex;
+  align-items: center;
+  background: #f5f5f5;
+  padding: 24rpx;
+  border-radius: 16rpx;
+}
+
+.reminder-icon {
+  font-size: 36rpx;
+  margin-right: 16rpx;
+}
+
+.reminder-content {
+  flex: 1;
+}
+
+.reminder-title {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.reminder-plants {
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 4rpx;
+}
+
+.reminder-action {
+  font-size: 24rpx;
+  color: #27ae60;
+}
+
+/* ========== 底部导航（极简）========== */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1rpx solid #f0f0f0;
+  z-index: 100;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-icon {
+  font-size: 36rpx;
+  margin-bottom: 4rpx;
+}
+
+.nav-text {
+  font-size: 22rpx;
+  color: #666;
+}
+
+.nav-item.active .nav-text {
+  color: #27ae60;
+}
