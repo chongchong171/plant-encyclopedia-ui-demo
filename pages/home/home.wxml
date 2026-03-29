@@ -1,69 +1,81 @@
-<!-- 花草百科全书 - 首页（白色清爽风格） -->
-<!-- 参考：白色背景 + 绿色点缀 + 大植物视觉 -->
+<!-- 花草百科全书 - 首页（科技感设计） -->
+<!-- 风格：渐变背景 + 大圆角卡片 + 层次分明 -->
 
 <view class="container">
-  <!-- 白色背景 -->
-  <view class="bg-white"></view>
+  <!-- 渐变背景 -->
+  <view class="gradient-bg"></view>
   
-  <!-- 顶部区域：Logo + 植物图 -->
-  <view class="header-section">
-    <!-- 大植物视觉 -->
-    <image class="plant-img" src="/images/monstera.png" mode="aspectFit"></image>
-  </view>
-
-  <!-- 品牌区域 -->
-  <view class="brand-section">
-    <text class="brand-name">花草百科全书</text>
-    <text class="brand-slogan">拍一拍，认识你的植物</text>
-  </view>
-
-  <!-- 核心功能：大按钮 -->
-  <view class="action-section">
-    <view class="main-btn" bindtap="takePhoto">
-      <view class="btn-icon-wrap">
-        <text class="btn-icon">📷</text>
+  <!-- 主内容区 -->
+  <view class="main-content">
+    <!-- 品牌 + 植物视觉 -->
+    <view class="hero-section">
+      <view class="brand">
+        <text class="brand-name">花草百科全书</text>
+        <text class="brand-slogan">AI 智能识别 · 一拍即知</text>
       </view>
-      <view class="btn-content">
-        <text class="btn-title">拍照识别</text>
-        <text class="btn-desc">对准植物拍一拍</text>
-      </view>
-      <text class="btn-arrow">›</text>
+      <image class="plant-visual" src="/images/monstera.png" mode="aspectFit"></image>
     </view>
     
-    <view class="main-btn secondary" bindtap="chooseFromAlbum">
-      <view class="btn-icon-wrap light">
-        <text class="btn-icon">🖼️</text>
+    <!-- 核心功能卡片 -->
+    <view class="feature-card">
+      <view class="card-header">
+        <text class="card-title">智能识别</text>
+        <text class="card-subtitle">AI 驱动 · 精准识别</text>
       </view>
-      <view class="btn-content">
-        <text class="btn-title">相册上传</text>
-        <text class="btn-desc">从相册选择植物照片</text>
+      
+      <view class="action-buttons">
+        <view class="action-btn primary" bindtap="takePhoto">
+          <view class="btn-icon-bg">
+            <text class="btn-icon">📷</text>
+          </view>
+          <text class="btn-label">拍照识别</text>
+        </view>
+        
+        <view class="action-btn" bindtap="chooseFromAlbum">
+          <view class="btn-icon-bg outline">
+            <text class="btn-icon">🖼️</text>
+          </view>
+          <text class="btn-label">相册上传</text>
+        </view>
       </view>
-      <text class="btn-arrow">›</text>
+    </view>
+    
+    <!-- 快捷功能 -->
+    <view class="quick-grid">
+      <view class="quick-card" bindtap="goToMyPlants">
+        <view class="quick-icon-bg green">
+          <text class="quick-icon">🌱</text>
+        </view>
+        <text class="quick-title">我的花园</text>
+        <text class="quick-count" wx:if="{{todayWaterCount > 0}}">{{todayWaterCount}}待浇水</text>
+      </view>
+      
+      <view class="quick-card" bindtap="goToSearch">
+        <view class="quick-icon-bg blue">
+          <text class="quick-icon">🔍</text>
+        </view>
+        <text class="quick-title">搜索植物</text>
+      </view>
+      
+      <view class="quick-card" bindtap="goToHistory">
+        <view class="quick-icon-bg purple">
+          <text class="quick-icon">📋</text>
+        </view>
+        <text class="quick-title">识别历史</text>
+      </view>
+      
+      <view class="quick-card" bindtap="goToChat">
+        <view class="quick-icon-bg orange">
+          <text class="quick-icon">🤖</text>
+        </view>
+        <text class="quick-title">AI 助手</text>
+      </view>
     </view>
   </view>
-
-  <!-- 快捷入口 -->
-  <view class="quick-actions">
-    <view class="quick-item" bindtap="goToMyPlants">
-      <text class="quick-icon">🌱</text>
-      <text class="quick-text">我的花园</text>
-    </view>
-    <view class="quick-item" bindtap="goToSearch">
-      <text class="quick-icon">🔍</text>
-      <text class="quick-text">搜索</text>
-    </view>
-    <view class="quick-item" bindtap="goToHistory">
-      <text class="quick-icon">📋</text>
-      <text class="quick-text">历史</text>
-    </view>
-    <view class="quick-item" bindtap="goToChat">
-      <text class="quick-icon">💬</text>
-      <text class="quick-text">AI助手</text>
-    </view>
-  </view>
-
-  <!-- 底部装饰 -->
-  <view class="footer-decor">
-    <text class="footer-text">每一片叶子，都有它的故事</text>
+  
+  <!-- 底部提示 -->
+  <view class="footer-hint">
+    <text class="hint-text">左滑查看更多功能</text>
+    <text class="hint-arrow">←</text>
   </view>
 </view>

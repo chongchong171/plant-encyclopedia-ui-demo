@@ -1,7 +1,8 @@
 // pages/home/home.js
 Page({
   data: {
-    startX: 0
+    startX: 0,
+    todayWaterCount: 0
   },
 
   onLoad() {
@@ -16,8 +17,20 @@ Page({
     wx.showToast({ title: '相册上传', icon: 'none' })
   },
 
+  goToMyPlants() {
+    wx.showToast({ title: '我的花园', icon: 'none' })
+  },
+
+  goToSearch() {
+    wx.showToast({ title: '搜索植物', icon: 'none' })
+  },
+
+  goToHistory() {
+    wx.showToast({ title: '识别历史', icon: 'none' })
+  },
+
   goToChat() {
-    wx.navigateTo({ url: '/pages/main/main' })
+    wx.showToast({ title: 'AI助手', icon: 'none' })
   },
 
   onTouchStart(e) {
