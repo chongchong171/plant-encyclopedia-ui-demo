@@ -1,81 +1,63 @@
-<!-- 花草百科全书 - 首页（科技感设计） -->
-<!-- 风格：渐变背景 + 大圆角卡片 + 层次分明 -->
+<!-- 花草百科全书 - 首页（复刻 Motiff AI 设计） -->
+<view class="page">
+  <!-- 顶部品牌区 -->
+  <view class="header">
+    <view class="logo-area">
+      <text class="logo-icon">🌿</text>
+      <text class="logo-text">花草百科</text>
+    </view>
+    <text class="tagline">AI识别 · 养护指南</text>
+  </view>
 
-<view class="container">
-  <!-- 渐变背景 -->
-  <view class="gradient-bg"></view>
-  
-  <!-- 主内容区 -->
-  <view class="main-content">
-    <!-- 品牌 + 植物视觉 -->
-    <view class="hero-section">
-      <view class="brand">
-        <text class="brand-name">花草百科全书</text>
-        <text class="brand-slogan">AI 智能识别 · 一拍即知</text>
+  <!-- 大植物视觉区 -->
+  <view class="hero-visual">
+    <image class="plant-image" src="/images/monstera.png" mode="aspectFit"></image>
+  </view>
+
+  <!-- 主操作按钮 -->
+  <view class="main-action">
+    <view class="camera-btn" bindtap="takePhoto">
+      <view class="camera-icon-wrap">
+        <text class="camera-icon">📷</text>
       </view>
-      <image class="plant-visual" src="/images/monstera.png" mode="aspectFit"></image>
-    </view>
-    
-    <!-- 核心功能卡片 -->
-    <view class="feature-card">
-      <view class="card-header">
-        <text class="card-title">智能识别</text>
-        <text class="card-subtitle">AI 驱动 · 精准识别</text>
-      </view>
-      
-      <view class="action-buttons">
-        <view class="action-btn primary" bindtap="takePhoto">
-          <view class="btn-icon-bg">
-            <text class="btn-icon">📷</text>
-          </view>
-          <text class="btn-label">拍照识别</text>
-        </view>
-        
-        <view class="action-btn" bindtap="chooseFromAlbum">
-          <view class="btn-icon-bg outline">
-            <text class="btn-icon">🖼️</text>
-          </view>
-          <text class="btn-label">相册上传</text>
-        </view>
-      </view>
-    </view>
-    
-    <!-- 快捷功能 -->
-    <view class="quick-grid">
-      <view class="quick-card" bindtap="goToMyPlants">
-        <view class="quick-icon-bg green">
-          <text class="quick-icon">🌱</text>
-        </view>
-        <text class="quick-title">我的花园</text>
-        <text class="quick-count" wx:if="{{todayWaterCount > 0}}">{{todayWaterCount}}待浇水</text>
-      </view>
-      
-      <view class="quick-card" bindtap="goToSearch">
-        <view class="quick-icon-bg blue">
-          <text class="quick-icon">🔍</text>
-        </view>
-        <text class="quick-title">搜索植物</text>
-      </view>
-      
-      <view class="quick-card" bindtap="goToHistory">
-        <view class="quick-icon-bg purple">
-          <text class="quick-icon">📋</text>
-        </view>
-        <text class="quick-title">识别历史</text>
-      </view>
-      
-      <view class="quick-card" bindtap="goToChat">
-        <view class="quick-icon-bg orange">
-          <text class="quick-icon">🤖</text>
-        </view>
-        <text class="quick-title">AI 助手</text>
-      </view>
+      <text class="camera-text">拍照识别</text>
     </view>
   </view>
-  
+
+  <!-- 功能入口网格 -->
+  <view class="feature-grid">
+    <view class="feature-item" bindtap="chooseFromAlbum">
+      <view class="feature-icon album">
+        <text class="icon">🖼️</text>
+      </view>
+      <text class="feature-name">相册识别</text>
+    </view>
+    
+    <view class="feature-item" bindtap="goToSearch">
+      <view class="feature-icon search">
+        <text class="icon">🔍</text>
+      </view>
+      <text class="feature-name">植物搜索</text>
+    </view>
+    
+    <view class="feature-item" bindtap="goToMyPlants">
+      <view class="feature-icon garden">
+        <text class="icon">🌱</text>
+      </view>
+      <text class="feature-name">我的花园</text>
+    </view>
+    
+    <view class="feature-item" bindtap="goToChat">
+      <view class="feature-icon ai">
+        <text class="icon">🤖</text>
+      </view>
+      <text class="feature-name">AI助手</text>
+    </view>
+  </view>
+
   <!-- 底部提示 -->
-  <view class="footer-hint">
-    <text class="hint-text">左滑查看更多功能</text>
-    <text class="hint-arrow">←</text>
+  <view class="footer-tip">
+    <text class="tip-text">左滑查看更多</text>
+    <text class="tip-arrow">←</text>
   </view>
 </view>

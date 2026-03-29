@@ -1,7 +1,7 @@
 {
-  "navigationBarTitleText": "花草百科全书",
-  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTitleText": "花草百科",
+  "navigationBarBackgroundColor": "#fafafa",
   "navigationBarTextStyle": "black",
-  "backgroundColor": "#ffffff",
+  "backgroundColor": "#fafafa",
   "usingComponents": {}
 }

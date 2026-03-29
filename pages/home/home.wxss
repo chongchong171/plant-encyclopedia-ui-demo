@@ -1,226 +1,173 @@
-/* 花草百科全书 - 首页样式（科技感设计） */
-/* 核心：渐变 + 圆角 + 阴影 + 留白 */
+/* 花草百科全书 - 首页样式（复刻 Motiff AI 设计） */
 
-/* ========== 容器 ========== */
-.container {
+/* ========== 页面容器 ========== */
+.page {
   min-height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
-
-/* ========== 渐变背景 ========== */
-.gradient-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(160deg, #e8f5e9 0%, #ffffff 30%, #f3e5f5 70%, #e3f2fd 100%);
-  z-index: 0;
-}
-
-/* ========== 主内容 ========== */
-.main-content {
-  position: relative;
-  z-index: 1;
-  padding: 60rpx 40rpx 40rpx;
-  min-height: 100vh;
+  background: #fafafa;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 80rpx 40rpx 60rpx;
 }
 
-/* ========== Hero 区域 ========== */
-.hero-section {
+/* ========== 顶部品牌区 ========== */
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 40rpx;
 }
 
-.brand {
+.logo-area {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-bottom: 30rpx;
+  margin-bottom: 12rpx;
 }
 
-.brand-name {
+.logo-icon {
+  font-size: 48rpx;
+  margin-right: 12rpx;
+}
+
+.logo-text {
   font-size: 48rpx;
   font-weight: 700;
-  background: linear-gradient(135deg, #2e7d32 0%, #1565c0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: 2rpx;
-}
-
-.brand-slogan {
-  font-size: 24rpx;
-  color: #78909c;
-  margin-top: 8rpx;
+  color: #1a1a1a;
   letter-spacing: 4rpx;
 }
 
-.plant-visual {
-  width: 60%;
-  max-height: 32vh;
-  filter: drop-shadow(0 20rpx 40rpx rgba(46, 125, 50, 0.2));
+.tagline {
+  font-size: 24rpx;
+  color: #4caf50;
+  letter-spacing: 2rpx;
 }
 
-/* ========== 功能卡片 ========== */
-.feature-card {
-  background: #ffffff;
-  border-radius: 32rpx;
-  padding: 36rpx;
-  margin-bottom: 30rpx;
-  box-shadow: 0 8rpx 40rpx rgba(0, 0, 0, 0.06);
+/* ========== 大植物视觉区 ========== */
+.hero-visual {
+  width: 100%;
+  height: 380rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40rpx;
 }
 
-.card-header {
-  margin-bottom: 28rpx;
+.plant-image {
+  width: 70%;
+  max-height: 360rpx;
+  filter: drop-shadow(0 20rpx 40rpx rgba(76, 175, 80, 0.15));
 }
 
-.card-title {
+/* ========== 主操作按钮 ========== */
+.main-action {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50rpx;
+}
+
+.camera-btn {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%);
+  padding: 28rpx 60rpx;
+  border-radius: 50rpx;
+  box-shadow: 0 12rpx 32rpx rgba(76, 175, 80, 0.35);
+}
+
+.camera-icon-wrap {
+  width: 56rpx;
+  height: 56rpx;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16rpx;
+}
+
+.camera-icon {
+  font-size: 28rpx;
+}
+
+.camera-text {
   font-size: 32rpx;
   font-weight: 600;
-  color: #1a1a1a;
+  color: #ffffff;
+  letter-spacing: 2rpx;
 }
 
-.card-subtitle {
-  font-size: 22rpx;
-  color: #90a4ae;
-  margin-left: 12rpx;
+/* ========== 功能入口网格 ========== */
+.feature-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24rpx;
+  margin-bottom: 40rpx;
 }
 
-.action-buttons {
-  display: flex;
-  gap: 20rpx;
-}
-
-.action-btn {
-  flex: 1;
+.feature-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 28rpx 20rpx;
-  background: #f5f7fa;
+  background: #ffffff;
   border-radius: 24rpx;
-  transition: all 0.3s;
+  padding: 28rpx 16rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.04);
 }
 
-.action-btn.primary {
-  background: linear-gradient(135deg, #43a047 0%, #66bb6a 100%);
-}
-
-.btn-icon-bg {
+.feature-icon {
   width: 72rpx;
   height: 72rpx;
-  background: linear-gradient(135deg, #43a047 0%, #66bb6a 100%);
   border-radius: 20rpx;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 12rpx;
-  box-shadow: 0 8rpx 20rpx rgba(67, 160, 71, 0.3);
 }
 
-.btn-icon-bg.outline {
-  background: #ffffff;
-  border: 2rpx solid #e0e0e0;
-  box-shadow: none;
-}
-
-.btn-icon {
-  font-size: 32rpx;
-}
-
-.btn-label {
-  font-size: 26rpx;
-  font-weight: 500;
-  color: #333;
-}
-
-.action-btn.primary .btn-label {
-  color: #ffffff;
-}
-
-/* ========== 快捷功能网格 ========== */
-.quick-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16rpx;
-  margin-bottom: 30rpx;
-}
-
-.quick-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #ffffff;
-  border-radius: 20rpx;
-  padding: 24rpx 12rpx;
-  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.04);
-}
-
-.quick-icon-bg {
-  width: 64rpx;
-  height: 64rpx;
-  border-radius: 18rpx;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10rpx;
-}
-
-.quick-icon-bg.green {
-  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-}
-
-.quick-icon-bg.blue {
-  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-}
-
-.quick-icon-bg.purple {
-  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
-}
-
-.quick-icon-bg.orange {
+.feature-icon.album {
   background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
 }
 
-.quick-icon {
-  font-size: 28rpx;
+.feature-icon.search {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
 }
 
-.quick-title {
-  font-size: 22rpx;
+.feature-icon.garden {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+}
+
+.feature-icon.ai {
+  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+}
+
+.icon {
+  font-size: 32rpx;
+}
+
+.feature-name {
+  font-size: 24rpx;
   color: #333;
   font-weight: 500;
 }
 
-.quick-count {
-  font-size: 18rpx;
-  color: #f44336;
-  margin-top: 4rpx;
-}
-
 /* ========== 底部提示 ========== */
-.footer-hint {
+.footer-tip {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 20rpx 0;
-  opacity: 0.6;
+  opacity: 0.5;
+  margin-top: auto;
 }
 
-.hint-text {
+.tip-text {
   font-size: 22rpx;
-  color: #90a4ae;
+  color: #999;
 }
 
-.hint-arrow {
+.tip-arrow {
   font-size: 24rpx;
-  color: #90a4ae;
+  color: #999;
   margin-left: 8rpx;
   animation: swipeHint 1.5s ease-in-out infinite;
 }
@@ -230,6 +177,6 @@
     transform: translateX(0);
   }
   50% {
-    transform: translateX(-16rpx);
+    transform: translateX(-12rpx);
   }
 }

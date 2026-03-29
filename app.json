@@ -5,10 +5,10 @@
   ],
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTitleText": "花草百科全书",
+    "navigationBarBackgroundColor": "#fafafa",
+    "navigationBarTitleText": "花草百科",
     "navigationBarTextStyle": "black",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "#fafafa"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
