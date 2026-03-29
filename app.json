@@ -4,11 +4,11 @@
     "pages/main/main"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#1a3a2f",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "花草百科全书",
-    "navigationBarTextStyle": "white",
-    "backgroundColor": "#1a3a2f"
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ffffff"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

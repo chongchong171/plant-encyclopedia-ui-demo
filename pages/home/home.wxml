@@ -1,49 +1,69 @@
-<!-- 花草百科全书 - 首页（墨绿引导页风格） -->
-<!-- 参考：柠檬绿满屏首页 → 改为墨绿满屏 -->
-<!-- 特色：大字Slogan + 右下角滑屏引导 -->
+<!-- 花草百科全书 - 首页（白色清爽风格） -->
+<!-- 参考：白色背景 + 绿色点缀 + 大植物视觉 -->
 
-<view class="container" bindtouchstart="onTouchStart" bindtouchend="onTouchEnd">
-  <!-- 墨绿满屏背景 -->
-  <view class="bg-layer"></view>
+<view class="container">
+  <!-- 白色背景 -->
+  <view class="bg-white"></view>
   
-  <!-- 植物装饰图（大视觉占主体） -->
-  <view class="plant-visual">
+  <!-- 顶部区域：Logo + 植物图 -->
+  <view class="header-section">
+    <!-- 大植物视觉 -->
     <image class="plant-img" src="/images/monstera.png" mode="aspectFit"></image>
   </view>
 
-  <!-- Logo + Slogan 居中 -->
+  <!-- 品牌区域 -->
   <view class="brand-section">
     <text class="brand-name">花草百科全书</text>
-    <text class="brand-slogan">拍一拍，花草百科全知道</text>
+    <text class="brand-slogan">拍一拍，认识你的植物</text>
   </view>
 
-  <!-- 核心功能入口（极简） -->
-  <view class="action-bar">
-    <view class="action-btn primary" bindtap="takePhoto">
-      <text class="action-icon">📷</text>
-      <text class="action-text">拍照识别</text>
+  <!-- 核心功能：大按钮 -->
+  <view class="action-section">
+    <view class="main-btn" bindtap="takePhoto">
+      <view class="btn-icon-wrap">
+        <text class="btn-icon">📷</text>
+      </view>
+      <view class="btn-content">
+        <text class="btn-title">拍照识别</text>
+        <text class="btn-desc">对准植物拍一拍</text>
+      </view>
+      <text class="btn-arrow">›</text>
     </view>
-    <view class="action-btn secondary" bindtap="chooseFromAlbum">
-      <text class="action-icon">🖼️</text>
-      <text class="action-text">相册</text>
+    
+    <view class="main-btn secondary" bindtap="chooseFromAlbum">
+      <view class="btn-icon-wrap light">
+        <text class="btn-icon">🖼️</text>
+      </view>
+      <view class="btn-content">
+        <text class="btn-title">相册上传</text>
+        <text class="btn-desc">从相册选择植物照片</text>
+      </view>
+      <text class="btn-arrow">›</text>
     </view>
   </view>
 
-  <!-- 右下角滑屏引导 -->
-  <view class="swipe-guide">
-    <view class="swipe-arrow">
-      <text class="arrow-icon">←</text>
-      <text class="swipe-text">滑屏进入</text>
+  <!-- 快捷入口 -->
+  <view class="quick-actions">
+    <view class="quick-item" bindtap="goToMyPlants">
+      <text class="quick-icon">🌱</text>
+      <text class="quick-text">我的花园</text>
     </view>
-    <view class="swipe-dots">
-      <text class="dot active">●</text>
-      <text class="dot">○</text>
-      <text class="dot">○</text>
+    <view class="quick-item" bindtap="goToSearch">
+      <text class="quick-icon">🔍</text>
+      <text class="quick-text">搜索</text>
+    </view>
+    <view class="quick-item" bindtap="goToHistory">
+      <text class="quick-icon">📋</text>
+      <text class="quick-text">历史</text>
+    </view>
+    <view class="quick-item" bindtap="goToChat">
+      <text class="quick-icon">💬</text>
+      <text class="quick-text">AI助手</text>
     </view>
   </view>
 
-  <!-- AI 对话悬浮入口 -->
-  <view class="ai-fab" bindtap="goToChat">
-    <text class="ai-icon">💬</text>
+  <!-- 底部装饰 -->
+  <view class="footer-decor">
+    <text class="footer-text">每一片叶子，都有它的故事</text>
   </view>
 </view>
