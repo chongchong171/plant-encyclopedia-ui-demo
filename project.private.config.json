@@ -1,0 +1,7 @@
+{
+  "description": "私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。",
+  "projectname": "plant-encyclopedia-ui-demo",
+  "setting": {
+    "compileHotReLoad": true
+  }
+}
